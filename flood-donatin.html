@@ -13,61 +13,29 @@
 
     <header class="sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-10 z-10">
         <!-- navbar -->
-        <div class="navbar bg-[#f9f7f3] bg-opacity-80 md:pt-3 md:pb-8">
-            <!-- navbar for small device -->
-            <div class="dropdown flex justify-between">
-                <div class="">
-                    <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-white rounded-md z-[1] mt-2 p-2 shadow space-y-4 w-full border border-red-500">
-                        <div class=" text-black text-sm font-semibold  flex justify-center items-center">
-                            <span><img src="assets/coin.png" alt=""></span>
-                            <p id="sm-account-balance" class="mx-1">5000</p>
-                            <span>BDT</span>
-                        </div>
-
-                        <div class="text-center">
-                            <button id="blog-btn-sm"
-                                class="btn btn-sm px-6 bg-[#B4F461] font-semibold text-md">Blog</button>
-                        </div>
-                    </ul>
-                </div>
-                <div class="pl-14 md:hidden">
-                    <a class="font-semibold text-md flex justify-center gap-1">
-                        <img src="assets/logo.png" alt="logo" class="w-[10%]">
-                        Donate Bangladesh
-                    </a>
-                </div>
+        <div class="navbar w-full mx-auto flex justify-between md:px-24 px-3 pt-3 pb-3 md:pt-4 md:pb-8 bg-[#f9f7f3] bg-opacity-80">
+            <div class="">
+                <button id="blog-btn"
+                    class="btn btn-sm md:btn-md px-3 md:px-8 bg-[#B4F461] font-semibold text-sm md:text-xl">Blog</button>
             </div>
-            <!-- large device -->
-            <div class="hidden md:flex md:justify-center w-[95%] mx-auto">
-                <div class="flex justify-between items-center w-full">
-                    <button id="blog-btn-lg" class=" btn btn-sm  px-8 bg-[#B4F461] font-semibold text-xl">Blog</button>
+            <div class="">
+                <a class="font-semibold text-sm md:text-xl flex gap-1 md:gap-3 items-center justify-center"><img
+                        src="assets/logo.png" alt="logo" class="w-[10%] md:w-[15%]">Donate Bangladesh</a>
+            </div>
 
-                    <a class="font-semibold text-xl flex gap-3 items-center"><img src="assets/logo.png" alt="logo"
-                            class="w-[15%]">Donate Bangladesh</a>
-
-                    <div class="flex text-black text-lg font-semibold space-x-1">
-                        <span><img src="assets/coin.png" alt=""></span>
-                        <p id="account-balance">5000</p>
-                        <span>BDT</span>
-                    </div>
-                </div>
+            <div class="text-black text-sm md:text-lg font-semibold space-x-1">
+                <span><img src="assets/coin.png" alt=""></span>
+                <p id="account-balance">5000</p>
+                <span>BDT</span>
             </div>
         </div>
         <!-- page toggle buttons -->
-        <div class="hidden md:flex md:justify-center md:items-center gap-5 pt-12 pb-5 font-bold">
-            <button onclick="hideSHOW()" id="donation-btn" class="btn btn-md px-8 bg-[#B4F461]">Donation</button>
-            <button onclick="hideSHOW()" id="history-btn" class="btn btn-md px-8">History</button>
+        <div class="flex justify-center items-center gap-5 pt-6 md:pt-10 pb-5 font-bold">
+            <button onclick="hideSHOW()" id="donation-btn" class="btn btn-md px-8 bg-[#B4F461] hover:bg-none">Donation</button>
+            <button onclick="hideSHOW()" id="history-btn" class="btn btn-md px-8 hover:bg-none">History</button>
         </div>
     </header>
-    <main id="donation-cards" class="w-5/6 mx-auto my-20 space-y-7">
+    <main id="donation-cards" class="w-5/6 mx-auto md:my-20 my-0 space-y-7">
 
         <!-- modal -->
         <dialog id="my_modal_5" class="modal  modal-middle">
@@ -85,19 +53,19 @@
         <!-- card 1 -->
         <div class="card lg:card-side shadow-md shadow-gray-300 p-3">
             <img src="assets/noakhali.png" alt="Album" />
-            <div class="card-body">
+            <div class="md:ml-3 mt-8 space-y-3 md:px-8 px-3">
                 <div class="justify-start -mt-4">
-                    <button class="btn px-3 font-semibold text-lg"><img src="assets/coin.png" alt=""><span
+                    <button class="btn btn-md font-semibold text-lg"><img src="assets/coin.png" alt=""><span
                             id="n-donation-balance">0</span>BDT</button>
                 </div>
-                <h2 class="card-title font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                <h2 class="md:text-2xl text-lg font-bold">Donate for <span id="noakhali-h2">Flood at Noakhali, Bangladesh</span></h2>
                 <p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
                     will help provide essential supplies and to those affected by this disaster. Every contribution, big
                     or small, makes difference. Please join us in supporting the relief efforts and making a positive
                     impact on the lives of those in need.</p>
                 <input id="n-donation-input" type="text" placeholder="Your Donation Amount"
-                    class="input input-bordered w-full mt-8" />
-                <button id="n-donation-btn" class="btn bg-[#B4F461] mt-2 font-semibold text-lg"
+                    class="input input-bordered w-full" />
+                <button id="n-donation-btn" class="btn bg-[#B4F461] mt-2 font-semibold w-full text-lg"
                     onclick="donateMoney()">Donate Now</button>
             </div>
         </div>
@@ -105,12 +73,12 @@
         <!-- card 2 -->
         <div class="card lg:card-side shadow-md shadow-gray-300 p-3">
             <img src="assets/feni.png" alt="Album" />
-            <div class="card-body">
+            <div class="md:ml-3 mt-8 space-y-3 md:px-8 px-3">
                 <div class="justify-start -mt-4">
                     <button class="btn px-3 font-semibold text-lg"><img src="assets/coin.png" alt=""><span
                             id="feni-donation-balance">0</span>BDT</button>
                 </div>
-                <h2 class="card-title font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                <h2 class="md:text-2xl text-lg font-bold">Donate for<span id="feni-h2">Flood Relief in Feni,Bangladesh</span></h2>
                 <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss.
                     Your generous donation will help provide immediate aid, including food, clean water, and medical
                     supplies, to those affected by this calamity. Together, we can offer crucial support and help
@@ -118,7 +86,7 @@
                     difference. Please consider donating today to assist those in urgent need.</p>
                 <input id="feni-donation-input" type="text" placeholder="Your Donation Amount"
                     class="input input-bordered w-full mt-8" />
-                <button id="feni-donation-btn" class="btn bg-[#B4F461] mt-2 font-semibold text-lg"
+                <button id="feni-donation-btn" class="btn bg-[#B4F461] mt-2 font-semibold text-lg w-full"
                     onclick="donateMoney()">Donate Now</button>
             </div>
         </div>
@@ -126,12 +94,12 @@
         <!-- card 3 -->
         <div class="card lg:card-side shadow-md shadow-gray-300 p-3">
             <img src="assets/quota-protest.png" alt="Album" />
-            <div class="card-body">
+            <div class="md:ml-3 mt-8 space-y-3 md:px-8 px-3">
                 <div class="justify-start -mt-4">
                     <button class="btn px-3 font-semibold text-lg"><img src="assets/coin.png" alt=""><span
                             id="quota-movement-balance">0</span>BDT</button>
                 </div>
-                <h2 class="card-title font-bold">Aid for Injured in the Quota Movement</h2>
+                <h2 id="quota-h2" class="md:text-2xl text-lg font-bold">Aid for Injured in the Quota Movement, Bangladesh</h2>
                 <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many
                     individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary
                     supplies to those affected. By contributing, you help ensure that injured individuals receive the
@@ -140,33 +108,22 @@
                     support these brave individuals in their time of need.</p>
                 <input id="quota-movement-input" type="text" placeholder="Your Donation Amount"
                     class="input input-bordered w-full mt-8" />
-                <button id="quota-movement-btn" class="btn bg-[#B4F461] mt-2 font-semibold text-lg"
+                <button id="quota-movement-btn" class="btn bg-[#B4F461] mt-2 font-semibold text-lg w-full"
                     onclick="donateMoney()">Donate Now</button>
             </div>
         </div>
     </main>
 
     <!-- history section -->
-    <div id="history-container" class="w-[80%] mx-auto space-y-3 hidden">
-        <div class="bg-base-100 py-6 shadow-sm shadow-gray-400">
-            <p class="collapse-title text-xl font-medium">How do you select an element from the DOM?</p>
+    <div id="history-container" class="mdw-[80%] w-[90%] mx-auto hidden">
+        <div id="history-items" class="space-y-4">
+
         </div>
     </div>
 
 
     <!-- js -->
     <script src="js/flood-donation.js"></script>
-    <script src="js/buttons.js"></script>
+    <script src="js/buttons-toggle.js"></script>
 </body>
-
-<script>
-    // it will redirect to FAQ page
-    document.getElementById('blog-btn-lg').addEventListener('click', function () {
-        window.location.href = 'http://127.0.0.1:5500/blog.html';
-    });
-    document.getElementById('blog-btn-sm').addEventListener('click', function () {
-        window.location.href = 'http://127.0.0.1:5500/blog.html';
-    });
-</script>
-
 </html>

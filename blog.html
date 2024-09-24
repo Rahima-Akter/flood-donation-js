@@ -11,29 +11,33 @@
 
 <body>
 
-    <header class="sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-10 z-10">
+    <header class="sticky top-0 z-10 bg-[#f9f7f3]">
         <!-- navbar -->
-        <div class="navbar px-24 pt-4 pb-10 bg-[#f9f7f3] bg-opacity-80">
-            <div class="navbar-start">
-                <button id="home-btn" class="btn btn-sm px-8 bg-[#B4F461] font-semibold text-xl">Home</button>
+        <div class="navbar w-full md:w-[90%] mx-auto flex justify-between pt-2 pb-2 md:pt-4 md:pb-10">
+            <div class="">
+                <button id="home-btn" class="btn btn-sm md:btn-md px-2 md:px-8 bg-[#B4F461] font-semibold text-sm md:text-xl">Home</button>
             </div>
-            <div class="navbar-center">
-                <a class="font-semibold text-xl flex gap-3 items-center"><img src="assets/logo.png" alt="logo"
-                        class="w-[15%]">Donate
+            <div class="">
+                <a class="font-semibold text-sm md:text-xl flex gap-1 md:gap-3 items-center justify-center"><img src="assets/logo.png" alt="logo"
+                        class="w-[10%] md:w-[15%]">Donate
                     Bangladesh</a>
             </div>
-            <div class="navbar-end text-black font-semibold space-x-1">
+            <div class=" text-black text-sm md:text-lg font-semibold space-x-0">
                 <span><img src="assets/coin.png" alt=""></span>
                 <p>5000</p>
                 <span>BDT</span>
             </div>
         </div>
     </header>
-    <main class="mx-10 my-8">
-        <h1 class="text-4xl font-bold mb-5 flex"><span>Important FAQ</span><img src="assets/faq.gif" class="w-[10%] md:w-[5%] -mt-4"
-                    alt="Question animated icons created by Freepik - Flaticon"></h1>
+    <main class="mx-auto w-[90%] my-8">
         <!-- faq cards -->
         <div class="space-y-3">
+
+            <h1 class="text-2xl md:text-4xl font-bold mb-5 flex">
+                <span>Important FAQ</span>
+                <img src="assets/faq.gif" class="w-[10%] md:w-[5%] -mt-4 hidden md:inline-block"
+                    alt="Question animated icons created by Freepik - Flaticon">
+            </h1> 
             <div class="collapse collapse-arrow bg-base-200 py-6 shadow-sm shadow-gray-400">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
@@ -57,7 +61,7 @@
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM, and why
                     is it useful?</div>
                 <div class="collapse-content">
-                    <p class="pr-20">Event delegation is used for handling events.It allows us to handle multiple
+                    <p class="md:pr-20">Event delegation is used for handling events.It allows us to handle multiple
                         children at once through the parent container.It is useful because we need to write less codes
                         and it is dynamic.</p>
                 </div>
@@ -73,18 +77,9 @@
                         classList-object.</p>
                 </div>
             </div>
-
         </div>
     </main>
 
-   
+
 </body>
-<script>
-    // // it will redirect to home page
-    document.getElementById('home-btn').addEventListener('click', function () {
-        window.location.href = 'http://127.0.0.1:5500/flood-donatin.html';
-    });
-
-</script>
-
 </html>
