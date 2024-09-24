@@ -58,3 +58,4 @@ const quotaMovementDonationBtn = document.getElementById('quota-movement-btn');
 quotaMovementDonationBtn.addEventListener('click', function () {
     donateMoney('account-balance', 'quota-movement-balance', 'quota-movement-input', 'history-items', 'quota-h2');
 });
+

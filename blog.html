@@ -15,7 +15,7 @@
         <!-- navbar -->
         <div class="navbar w-full md:w-[90%] mx-auto flex justify-between pt-2 pb-2 md:pt-4 md:pb-10">
             <div class="">
-                <button id="home-btn"
+                <button id="home-btn" onclick="showHome()"
                     class="btn btn-sm md:btn-md px-2 md:px-8 bg-[#B4F461] font-semibold text-sm md:text-xl">Home</button>
             </div>
             <div class="">
@@ -82,12 +82,7 @@
     </main>
 
     <!-- js -->
-    <script>
-        // // it will redirect to home page
-        document.getElementById('home-btn').addEventListener('click', function () {
-            window.location.href = 'https://rahima-akter.github.io/flood-donation-js/flood-donation.html';
-        });
-
-    </script>
+    <script src="js/buttons-toggle.js"></script>
 </body>
+
 </html>
