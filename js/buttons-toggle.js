@@ -37,10 +37,10 @@ donationBtn.addEventListener('click', function () {
 
 // it will redirect to FAQ page
 document.getElementById('blog-btn').addEventListener('click', function () {
-    window.location.href = 'http://127.0.0.1:5500/blog.html';
+    window.location.href = 'https://rahima-akter.github.io/flood-donation-js/blog.html';
 });
 
  // // it will redirect to home page
  document.getElementById('home-btn').addEventListener('click', function () {
-    window.location.href = 'http://127.0.0.1:5500/flood-donatin.html';
+    window.location.href = 'https://rahima-akter.github.io/flood-donation-js/flood-donation.html';
 });
