@@ -15,11 +15,12 @@
         <!-- navbar -->
         <div class="navbar w-full md:w-[90%] mx-auto flex justify-between pt-2 pb-2 md:pt-4 md:pb-10">
             <div class="">
-                <button id="home-btn" class="btn btn-sm md:btn-md px-2 md:px-8 bg-[#B4F461] font-semibold text-sm md:text-xl">Home</button>
+                <button id="home-btn"
+                    class="btn btn-sm md:btn-md px-2 md:px-8 bg-[#B4F461] font-semibold text-sm md:text-xl">Home</button>
             </div>
             <div class="">
-                <a class="font-semibold text-sm md:text-xl flex gap-1 md:gap-3 items-center justify-center"><img src="assets/logo.png" alt="logo"
-                        class="w-[10%] md:w-[15%]">Donate
+                <a class="font-semibold text-sm md:text-xl flex gap-1 md:gap-3 items-center justify-center"><img
+                        src="assets/logo.png" alt="logo" class="w-[10%] md:w-[15%]">Donate
                     Bangladesh</a>
             </div>
             <div class=" text-black text-sm md:text-lg font-semibold space-x-0">
@@ -37,7 +38,7 @@
                 <span>Important FAQ</span>
                 <img src="assets/faq.gif" class="w-[10%] md:w-[5%] -mt-4 hidden md:inline-block"
                     alt="Question animated icons created by Freepik - Flaticon">
-            </h1> 
+            </h1>
             <div class="collapse collapse-arrow bg-base-200 py-6 shadow-sm shadow-gray-400">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
@@ -80,6 +81,14 @@
         </div>
     </main>
 
-
+    <!-- js -->
+    <script>
+        // // it will redirect to home page
+        document.getElementById('home-btn').addEventListener('click', function () {
+            window.location.href = 'https://rahima-akter.github.io/flood-donation-js/flood-donation.html';
+        });
+        
+    </script>
 </body>
+
 </html>

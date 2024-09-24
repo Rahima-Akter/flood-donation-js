@@ -39,8 +39,3 @@ donationBtn.addEventListener('click', function () {
 document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = 'https://rahima-akter.github.io/flood-donation-js/blog.html';
 });
-
- // // it will redirect to home page
- document.getElementById('home-btn').addEventListener('click', function () {
-    window.location.href = 'https://rahima-akter.github.io/flood-donation-js/flood-donation.html';
-});
